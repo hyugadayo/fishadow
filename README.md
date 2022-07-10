@@ -27,12 +27,13 @@
 
 ## mytools テーブル
 
-| Column             | Type    | Options     |
-| ------------------ | ------  | ----------- |
-| tool_name          | string  | null: false |
-| price              | integer | null: false |
-| manufacuture       | string  |             |
-| explain            | text    |             |
+| Column       | Type       | Options                        |
+| ------------ | ------     | -----------                    |
+| tool_name    | string     | null: false                    |
+| price        | integer    | null: false                    |
+| manufacuture | string     |                                |
+| explain      | text       |                                |
+| user         | references | null: false, foreign_key: true |
 
 ### Association
 
