@@ -66,7 +66,7 @@
 | explain            | text       | null: false                    |
 | wether_id          | integer    | null: false                    |
 | prefecture_id      | integer    | null: false                    |
-| area               | string     | null: false                    |
+| area               | string     |                                |
 | lat                | float      | null: false                    |
 | lng                | float      | null: false                    |
 | user               | references | null: false, foreign_key: true |
