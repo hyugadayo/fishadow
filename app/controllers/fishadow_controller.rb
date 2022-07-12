@@ -1,0 +1,2 @@
+class FishadowController < ApplicationController
+end
