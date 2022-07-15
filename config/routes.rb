@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :fishadow, only: :index 
   resources :fishings
-  root to: 'fishings#index'
+  root to: 'fishadow#index'
 end
