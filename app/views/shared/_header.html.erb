@@ -3,8 +3,16 @@
     <%= image_tag "fishadow.jpg", size: '70x70' %>
     <h2 class="font-weight-normal" id="fishadow">Fishadow</h2>
   </a>
+  <% if user_signed_in? %>
+  <ul class="header-button nav nav-pills">
+    <li class="nav-item"><%= link_to '釣果投稿', "#", id: "fishings_new"  %></li>
+    <li class="nav-item"><%= link_to 'マイページ', "#", id: "mypage"  %></li>
+    <li class="nav-item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, id: "logout"  %></li>
+  </ul>
+  <% else %>
   <ul class="header-button nav nav-pills">
     <li class="nav-item"><a href="/users/sign_up" class="nav-link active" aria-current="page" id="registration">新規登録</a></li>
     <li class="nav-item"><a href="/users/sign_in" class="nav-link" id="login">ログイン</a></li>
   </ul>
+  <% end %>
 </header>
