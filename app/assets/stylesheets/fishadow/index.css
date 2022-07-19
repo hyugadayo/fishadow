@@ -24,12 +24,21 @@
 
 #registration{
   font-weight: bold;
+  text-decoration: none;
   padding: 1rem 2rem;
   color: #fff;
   border-radius: 100vh;
   background-image: -webkit-gradient(linear, left top, right top, from(#209cff), to(#68e0cf));
   background-image: -webkit-linear-gradient(left, #209cff 0%, #68e0cf 100%);
   background-image: linear-gradient(to right, #209cff 0%, #68e0cf 100%);
+}
+
+#logout, #mypage, #fishings_new{
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #00CCCC;
 }
 
 #login{

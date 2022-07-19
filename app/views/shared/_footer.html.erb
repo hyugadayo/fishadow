@@ -1,0 +1,47 @@
+<footer class="w-100 bg-white">
+  <div class="footer-menu row text-center mx-auto d-flex align-items-center">
+    <% if user_signed_in? %>
+      <div class="col-xs-12 col-md-2 col-md-offset-2  mt-3 ">
+        <%= link_to '釣果投稿', "#", class: "footer-link" %>
+      </div>
+      <div class="col-xs-12 col-md-2 col-md-offset-4  mt-3">
+        <%= link_to 'マイページ', "#", class:"footer-link" %>
+      </div>
+      <div class="col-xs-12 col-md-2 col-md-offset-4  mt-3">
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "footer-link" %>
+      </div>
+    <% else %>
+      <div class="col-xs-12 col-md-2 col-md-offset-4  mt-3">
+        <a class="footer-link my-auto" href="/users/sign_up">
+          <i class="fas fa-chevron-right"></i>新規登録
+        </a>
+      </div>
+      <div class="col-xs-12 col-md-2 col-md-offset-4  mt-3">
+        <a class="footer-link" href="/users/sign_in">
+            <i class="fas fa-chevron-right"></i>ログイン
+        </a>
+      </div>
+      <div class="col-xs-12 col-md-2 col-md-offset-4  mt-3">
+        <a class="footer-link" href="/">
+          <i class="fas fa-chevron-right"></i>釣果一覧
+        </a>
+      </div>
+    <% end %>
+    <div class="col-xs-12 col-md-2 col-md-offset-4  mt-3">
+      <a class="footer-link" href="/">
+        <i class="fas fa-chevron-right"></i>利用規約
+      </a>
+    </div>
+    <div class="col-xs-12 col-md-2 col-md-offset-4  mt-3">
+        <a class="footer-link" href="/">
+          <i class="fas fa-chevron-right"></i>プライバシーポリシー
+        </a>
+    </div>
+    <div class="col-xs-12 col-md-2 mt-3">
+        <a class="footer-link fas fa-chevron-right" href="/">twitter</a>
+    </div>
+  </div>
+  <div class="web-copyright text-center pt-5 pb-3">
+    Copyright © 2022-2023 Fishadow. All Rights Reserved.
+  </div>
+</footer>
