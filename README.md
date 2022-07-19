@@ -5,12 +5,7 @@
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
 | nickname           | string     | null: false                    |
-| last_name_kana     | string     | null: false                    |
-| last_name          | string     | null: false                    |
 | email              | string     | null: false                    |
-| first_name         | string     | null: false                    |
-| birth_date         | date       | null: false                    |
-| first_name_kana    | string     | null: false                    |
 | encrypted_password | string     | null: false                    |
 | prefecture_id      | references | null: false, foreign_key: true |
 
