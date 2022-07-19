@@ -146,7 +146,7 @@
 .application_recomended{
   height: 400px;
   width: 100%;
-  background-image: url(/assets/fishadow_footer.jpg);
+  background-image: url('fishadow_footer.jpg');
   background-size: cover;
 }
 
