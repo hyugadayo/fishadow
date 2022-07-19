@@ -1,5 +1,5 @@
 class FishingsController < ApplicationController
-before_action :authenticate_user!, expect: :index
+  before_action :authenticate_user!, expect: :index
 
   def index
   end
