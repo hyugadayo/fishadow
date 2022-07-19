@@ -2,17 +2,17 @@
 
 ## users テーブル
 
-| Column             | Type    | Options     |
-| ------------------ | ------  | ----------- |
-| nickname           | string  | null: false |
-| last_name_kana     | string  | null: false |
-| last_name          | string  | null: false |
-| email              | string  | null: false |
-| first_name         | string  | null: false |
-| birth_date         | date    | null: false |
-| first_name_kana    | string  | null: false |
-| encrypted_password | string  | null: false |
-| prefecture_id      | integer | null: false |
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| nickname           | string     | null: false                    |
+| last_name_kana     | string     | null: false                    |
+| last_name          | string     | null: false                    |
+| email              | string     | null: false                    |
+| first_name         | string     | null: false                    |
+| birth_date         | date       | null: false                    |
+| first_name_kana    | string     | null: false                    |
+| encrypted_password | string     | null: false                    |
+| prefecture_id      | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -23,6 +23,7 @@
 - has_one :mytools,  dependent: :destroy
 - has_many :follower, class_name: "Relationship",  dependent: :destroy
 - has_many :followed, class_name: "Relationship",  dependent: :destroy
+- belongs_to :prefecture
 
 
 ## mytools テーブル
@@ -52,6 +53,18 @@
 - belongs_to :follower, class_name: "User"
 - belongs_to :followed, class_name: "User"
 
+## prefecture テーブル
+
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| name               | string     | null: false                    |
+
+
+### Association
+
+- has_many :users
+- has_many :fishings
+
 
 ## fishings テーブル
 
@@ -65,7 +78,7 @@
 | style              | string     | null: false                    |
 | explain            | text       | null: false                    |
 | wether_id          | integer    | null: false                    |
-| prefecture_id      | integer    | null: false                    |
+| prefecture_id      | references | null: false, foreign_key: true |
 | area               | string     |                                |
 | lat                | float      | null: false                    |
 | lng                | float      | null: false                    |
@@ -77,6 +90,7 @@
 - has_many :comments,  dependent: :destroy
 - has_many :goods,     dependent: :destroy
 - has_many :favorites, dependent: :destroy
+- belongs_to :prefecture
 
 
 ## comments テーブル
@@ -106,7 +120,7 @@
 - belongs_to :user
 - belongs_to :fishing
 
-## goods テーブル
+## like テーブル
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
