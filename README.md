@@ -58,6 +58,7 @@
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
 | name               | string     | null: false                    |
+| slug               | string     | null: false                    |
 
 
 ### Association
