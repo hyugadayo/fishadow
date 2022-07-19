@@ -8,6 +8,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string  :email,              null: false, default: ""
       t.string  :encrypted_password, null: false, default: ""
       t.integer :prefecture_id,      null: false, foreign_key: true
+      t.text    :introduce
 
       ## Recoverable
       t.string   :reset_password_token
