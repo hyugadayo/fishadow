@@ -9,5 +9,5 @@ class User < ApplicationRecord
   validates :password, format: { with: VALID_PASSWORD_REGEX }
 
   has_many :fishings
-  has_many :prefecture
+  belongs_to :prefecture
 end

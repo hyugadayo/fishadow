@@ -7,7 +7,7 @@
 | nickname           | string     | null: false                    |
 | email              | string     | null: false                    |
 | encrypted_password | string     | null: false                    |
-| prefecture_id      | references | null: false, foreign_key: true |
+| prefecture         | references | null: false, foreign_key: true |
 | introduce          | text       |                                |
 
 ### Association
