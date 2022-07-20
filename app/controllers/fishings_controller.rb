@@ -3,4 +3,10 @@ class FishingsController < ApplicationController
 
   def index
   end
+
+  def new
+    @fishings = Fisings.new
+  end
+
+
 end
