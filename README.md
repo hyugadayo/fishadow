@@ -7,7 +7,7 @@
 | nickname           | string     | null: false                    |
 | email              | string     | null: false                    |
 | encrypted_password | string     | null: false                    |
-| prefecture         | references | null: false, foreign_key: true |
+| prefecture         | integer    | null: false, foreign_key: true |
 | introduce          | text       |                                |
 
 ### Association
@@ -75,7 +75,7 @@
 | style              | string     | null: false                    |
 | explain            | text       | null: false                    |
 | wether_id          | integer    | null: false                    |
-| prefecture_id      | references | null: false, foreign_key: true |
+| prefecture_id      | integer    | null: false, foreign_key: true |
 | area               | string     |                                |
 | lat                | float      | null: false                    |
 | lng                | float      | null: false                    |
