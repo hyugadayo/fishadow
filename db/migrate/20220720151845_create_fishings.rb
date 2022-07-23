@@ -8,7 +8,7 @@ class CreateFishings < ActiveRecord::Migration[6.0]
       t.string     :weight
       t.string     :style
       t.text       :explain
-      t.integer    :wether_id
+      t.string     :wether
       t.float      :lat, null: false
       t.float      :lng, null: false
       t.references :user, null: false, foreign_key: true

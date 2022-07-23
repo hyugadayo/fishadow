@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2022_07_20_151845) do
     t.string "weight"
     t.string "style"
     t.text "explain"
-    t.integer "wether_id"
+    t.string "wether"
     t.float "lat", null: false
     t.float "lng", null: false
     t.bigint "user_id", null: false

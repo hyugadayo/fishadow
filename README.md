@@ -74,7 +74,7 @@
 | weight             | string     |                                |
 | style              | string     |                                |
 | explain            | text       |                                |
-| wether_id          | integer    |                                |
+| wether             | string     |                                |
 | lat                | float      | null: false                    |
 | lng                | float      | null: false                    |
 | user               | references | null: false, foreign_key: true |
