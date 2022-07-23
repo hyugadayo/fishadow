@@ -70,13 +70,11 @@
 | get_date           | date       | null: false                    |
 | fish_name          | string     | null: false                    |
 | get_number         | integer    | null: false                    |
-| size               | string     | null: false                    |
-| weight             | string     | null: false                    |
-| style              | string     | null: false                    |
-| explain            | text       | null: false                    |
-| wether_id          | integer    | null: false                    |
-| prefecture_id      | integer    | null: false, foreign_key: true |
-| area               | string     |                                |
+| size               | string     |                                |
+| weight             | string     |                                |
+| style              | string     |                                |
+| explain            | text       |                                |
+| wether_id          | integer    |                                |
 | lat                | float      | null: false                    |
 | lng                | float      | null: false                    |
 | user               | references | null: false, foreign_key: true |

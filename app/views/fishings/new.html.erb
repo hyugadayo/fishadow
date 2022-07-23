@@ -1,0 +1,66 @@
+<%= render "shared/header"%>
+
+<div class="fishings-sell-contents">
+  <header class="fishings-sell-header">
+
+  </header>
+  <div class="fishings-sell-main">
+    <h2 class="fishings-sell-title ">釣果登録</h2>
+    <%= form_with model: @fishings, id: 'new_post', local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+    <%# 釣果画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        <span class="indispensable text-white">必須</span>
+        投稿画像
+      </div>
+      <div class="click-upload">
+        <div id="previews"></div>
+          <%= f.file_field :images, name: 'fishings[images][]', data: {index: 0}, id:"fishings-images" %>
+      </div>
+    </div>
+    <%# /釣果画像 %>
+    <%# 魚種とその他入力欄 %>
+    <div class="new-fishings">
+      <div class="weight-bold-text">
+        <span class="indispensable text-white">必須</span>
+        魚種
+      </div>
+      <%= f.text_area :fish_name, class:"fishings-text", id:"fishings-name"%>
+      <div class="weight-bold-text">
+        <span class="indispensable text-white">必須</span>
+        数量
+      </div>
+      <%= f.text_area :get_number, class:"fishings-text", id:"fishings-num" %>
+      <div class="weight-bold-text">
+        サイズ(cm)
+      </div>
+      <%= f.text_area :size, class:"fishings-text", id:"fishings-weight" %>
+      <div class="weight-bold-text">
+        重さ(Kg)
+      </div>
+      <%= f.text_area :weight, class:"fishings-text", id:"fishings-weight" %>
+      <div class="fishings-explain">
+        <div class="weight-bold-text">
+          釣り方
+        </div>
+        <%= f.text_area :style, class:"fishings-text", id:"fishings-info", placeholder: "ルアー、エサ釣り、その他" %>
+        <div class="weight-bold-text">
+          説明
+        </div>
+        <%= f.text_area :explain, class:"fishings-text", id:"fishings-info" %>
+        <div class="weight-bold-text">
+          天気
+        </div>
+        <%= f.text_area :wether_id, class:"fishings-text", id:"fishings-info" %>
+    </div>
+    <%# /魚名とその他入力欄 %>
+      <div class="sell-btn-contents ">
+        <%= f.submit "登録する" ,class:"sell-btn " %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+  </div>
+  <% end %>
+</div>
+
+<%= render "shared/footer"%>

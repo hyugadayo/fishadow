@@ -5,7 +5,7 @@
   </a>
   <% if user_signed_in? %>
   <ul class="header-button nav nav-pills">
-    <li class="nav-item"><%= link_to '釣果投稿', "new_fishing_path", id: "fishings_new"  %></li>
+    <li class="nav-item"><%= link_to '釣果投稿', new_fishing_path, id: "fishings_new"  %></li>
     <li class="nav-item"><%= link_to 'マイページ', "#", id: "mypage"  %></li>
     <li class="nav-item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, id: "logout"  %></li>
   </ul>

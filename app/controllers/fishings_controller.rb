@@ -5,7 +5,7 @@ class FishingsController < ApplicationController
   end
 
   def new
-    @fishings = Fisings.new
+    @fishings = Fishing.new
   end
 
 
