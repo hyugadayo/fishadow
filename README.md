@@ -72,9 +72,9 @@
 | get_number         | integer    | null: false                    |
 | size               | string     |                                |
 | weight             | string     |                                |
-| style              | string     |                                |
+| style              | string     | null: false                    |
 | explain            | text       |                                |
-| wether             | string     |                                |
+| wether             | string     | null: false                    |
 | lat                | float      | null: false                    |
 | lng                | float      | null: false                    |
 | user               | references | null: false, foreign_key: true |
