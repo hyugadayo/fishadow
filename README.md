@@ -7,7 +7,7 @@
 | nickname           | string     | null: false                    |
 | email              | string     | null: false                    |
 | encrypted_password | string     | null: false                    |
-| prefecture         | references | null: false, foreign_key: true |
+| prefecture         | integer    | null: false, foreign_key: true |
 | introduce          | text       |                                |
 
 ### Association
@@ -70,13 +70,11 @@
 | get_date           | date       | null: false                    |
 | fish_name          | string     | null: false                    |
 | get_number         | integer    | null: false                    |
-| size               | string     | null: false                    |
-| weight             | string     | null: false                    |
+| size               | string     |                                |
+| weight             | string     |                                |
 | style              | string     | null: false                    |
-| explain            | text       | null: false                    |
-| wether_id          | integer    | null: false                    |
-| prefecture_id      | references | null: false, foreign_key: true |
-| area               | string     |                                |
+| explain            | text       |                                |
+| wether             | string     | null: false                    |
 | lat                | float      | null: false                    |
 | lng                | float      | null: false                    |
 | user               | references | null: false, foreign_key: true |

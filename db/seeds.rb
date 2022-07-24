@@ -1,3 +1,4 @@
+Prefecture.create(name: '--', slug: '--')
 Prefecture.create(name: '北海道', slug: 'hokkaido')
 Prefecture.create(name: '青森', slug: 'aomori')
 Prefecture.create(name: '秋田', slug: 'akita')

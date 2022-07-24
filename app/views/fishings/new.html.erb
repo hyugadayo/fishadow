@@ -1,0 +1,79 @@
+<%= render "shared/header"%>
+
+<div class="fishings-sell-contents">
+  <header class="fishings-sell-header">
+
+  </header>
+  <div class="fishings-sell-main">
+    <h2 class="fishings-sell-title ">釣果登録</h2>
+    <%= form_with model: @fishing, id: 'new_post', local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+    <%# 釣果画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        <span class="indispensable text-white">必須</span>
+        投稿画像
+      </div>
+      <div class="click-upload">
+        <div id="previews"></div>
+          <%= f.file_field :image, id:"fishings-image" %>
+      </div>
+    </div>
+    <%# /釣果画像 %>
+    <%# 魚種とその他入力欄 %>
+    <div class="new-fishings">
+      <div class="weight-bold-text">
+        <span class="indispensable text-white">必須</span>
+          日時
+      </div>
+        <%= f.date_field :get_date, class:"fishings-text mb-1", id:"fishings-date" %>
+      <div class="weight-bold-text">
+        <span class="indispensable text-white">必須</span>
+        魚種
+      </div>
+      <%= f.text_area :fish_name, class:"fishings-text", id:"fishings-name"%>
+      <div class="weight-bold-text">
+        <span class="indispensable text-white">必須</span>
+        数量
+      </div>
+      <%= f.number_field :get_number, class:"fishings-text", id:"fishings-num" %>
+      <div class="weight-bold-text">
+        サイズ(cm)
+      </div>
+      <%= f.number_field :size, class:"fishings-text", id:"fishings-weight" %>
+      <div class="weight-bold-text">
+        重さ(Kg)
+      </div>
+      <%= f.number_field :weight, class:"fishings-text", id:"fishings-weight" %>
+      <div class="fishings-explain">
+        <div class="weight-bold-text">
+          釣り方
+        </div>
+        <%= f.select :style, [["ルアー", "ルアー"], ["エサ釣り","エサ釣り"], ["その他","その他"]], {include_blank: "選択してください"}, {class: 'fishings-text mb-1'} %>
+        <div class="weight-bold-text">
+          説明
+        </div>
+        <%= f.text_area :explain, class:"fishings-text", id:"fishings-info" %>
+        <div class="weight-bold-text">
+          天気
+        </div>
+        <%= f.select :wether, [["晴れ", "晴れ"], ["曇り", "曇り"], ["雨", "雨"], ["その他", "その他"]], {include_blank: "選択して下さい"}, {class: 'fishings-text'} %>
+      <div class="weight-bold-text">
+        緯度
+      </div>
+      <%= f.number_field :lat, step: '0.1', class:"fishings-text", id:"fishings-lat" %>
+      <div class="weight-bold-text">
+        経度
+      </div>
+      <%= f.number_field :lng, step: '0.1', class:'fishings-text', id:"fishings-lng" %>
+    </div>
+    <%# /魚名とその他入力欄 %>
+      <div class="sell-btn-contents ">
+        <%= f.submit "登録する" ,class:"sell-btn " %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+  </div>
+  <% end %>
+</div>
+
+<%= render "shared/footer"%>
