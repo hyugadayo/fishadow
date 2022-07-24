@@ -39,9 +39,9 @@ ActiveRecord::Schema.define(version: 2022_07_23_130533) do
     t.integer "get_number", null: false
     t.string "size", null: false
     t.string "weight"
-    t.string "style"
+    t.string "style", null: false
     t.text "explain"
-    t.string "wether"
+    t.string "wether", null: false
     t.float "lat", null: false
     t.float "lng", null: false
     t.bigint "user_id", null: false

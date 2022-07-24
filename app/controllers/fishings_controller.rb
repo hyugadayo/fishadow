@@ -5,10 +5,10 @@ class FishingsController < ApplicationController
   end
 
   def new
-    @fishings = Fishing.new
+    @fishing = Fishing.new
   end
 
-  def crate
+  def create
     @fishing = Fishing.new(fishing_params)
     if @fishing.save
       redirect_to fishings_path

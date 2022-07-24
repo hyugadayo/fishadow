@@ -9,9 +9,9 @@ class Fishing < ApplicationRecord
                                           numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 1000 }
   validates :weight,                      format: {with: /\A[-]?[0-9]+(\.[0-9]+)?\z/},                               # 全て半角数値（マイナス、小数点、1~1000まで)
                                           numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 1000 }
-  validates :style,                       exclusion: { in: "選択してください"}
+  validates :style, presence: true,        inclusion: { in: ["ルアー","エサ釣り","その他"] }
   validates :explain,                     length: {maximum: 1000}                                                    # 1000文字まで
-  validates :wether,                      exclusion: { in: "選択してください"}
+  validates :wether, presence: true,       inclusion: { in: ["晴れ","曇り","雨","その他"] }
   
   belongs_to :user
   has_one_attached :image

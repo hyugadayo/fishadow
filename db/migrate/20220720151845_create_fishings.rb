@@ -1,17 +1,17 @@
 class CreateFishings < ActiveRecord::Migration[6.0]
   def change
     create_table :fishings do |t|
-      t.date       :get_date, null: false
-      t.string     :fish_name, null: false
-      t.integer    :get_number, null: false
-      t.string     :size, null: false
+      t.date       :get_date,    null: false
+      t.string     :fish_name,   null: false
+      t.integer    :get_number,  null: false
+      t.string     :size,        null: false
       t.string     :weight
-      t.string     :style
+      t.string     :style,       null: false
       t.text       :explain
-      t.string     :wether
-      t.float      :lat, null: false
-      t.float      :lng, null: false
-      t.references :user, null: false, foreign_key: true
+      t.string     :wether,      null: false
+      t.float      :lat,         null: false
+      t.float      :lng,         null: false
+      t.references :user,        null: false, foreign_key: true
       t.timestamps
     end
   end

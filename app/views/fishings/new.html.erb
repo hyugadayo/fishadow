@@ -6,7 +6,7 @@
   </header>
   <div class="fishings-sell-main">
     <h2 class="fishings-sell-title ">釣果登録</h2>
-    <%= form_with model: @fishings, id: 'new_post', local: true do |f| %>
+    <%= form_with model: @fishing, id: 'new_post', local: true do |f| %>
     <%= render 'shared/error_messages', model: f.object %>
     <%# 釣果画像 %>
     <div class="img-upload">
