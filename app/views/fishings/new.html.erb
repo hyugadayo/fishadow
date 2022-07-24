@@ -36,15 +36,15 @@
         <span class="indispensable text-white">必須</span>
         数量
       </div>
-      <%= f.text_area :get_number, class:"fishings-text", id:"fishings-num" %>
+      <%= f.number_field :get_number, class:"fishings-text", id:"fishings-num" %>
       <div class="weight-bold-text">
         サイズ(cm)
       </div>
-      <%= f.text_area :size, class:"fishings-text", id:"fishings-weight" %>
+      <%= f.number_field :size, class:"fishings-text", id:"fishings-weight" %>
       <div class="weight-bold-text">
         重さ(Kg)
       </div>
-      <%= f.text_area :weight, class:"fishings-text", id:"fishings-weight" %>
+      <%= f.number_field :weight, class:"fishings-text", id:"fishings-weight" %>
       <div class="fishings-explain">
         <div class="weight-bold-text">
           釣り方
@@ -58,6 +58,14 @@
           天気
         </div>
         <%= f.select :wether, [["晴れ", "晴れ"], ["曇り", "曇り"], ["雨", "雨"], ["その他", "その他"]], {include_blank: "選択して下さい"}, {class: 'fishings-text'} %>
+      <div class="weight-bold-text">
+        緯度
+      </div>
+      <%= f.number_field :lat, step: '0.1', class:"fishings-text", id:"fishings-lat" %>
+      <div class="weight-bold-text">
+        経度
+      </div>
+      <%= f.number_field :lng, step: '0.1', class:'fishings-text', id:"fishings-lng" %>
     </div>
     <%# /魚名とその他入力欄 %>
       <div class="sell-btn-contents ">
